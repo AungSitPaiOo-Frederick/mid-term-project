@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အချစ်ကဖေး</title>
+    <link rel="icon" type="image/x-icon" href="photo/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body
+        {
+            margin: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: bisque;
+        }
+        .section1
+        {
+            background-color: #ecf2f2;
+            padding: 0px 0px 30px 0px;
+        }
+        .section1 .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section1 .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 46px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .section1 .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .section1 .nav
+        {
+            display: flex;
+            gap: 15px;
+            margin-left: 100px;
+        }
+        .section1 .nav a, .reg a
+        {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000000;
+        }
+        .section1 .nav a hr, .reg a hr
+        {
+            visibility: hidden;
+            width: 0%;
+            transition-duration: 0.5s;
+            margin-right: 100%;
+            margin-top: 3px;
+        }
+        .section1 .nav a:hover hr, .reg a:hover hr
+        {
+            visibility: visible;
+            width: 100%;
+        }
+
+        .section1 .reg
+        {
+            margin-right: 100px;
+        }
+        .section1 .intro
+        {
+            text-align: left;
+            margin-left: 150px;
+            margin-top: 100px;
+        }
+        .section1 .intro h1
+        {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+        }
+        .footer
+        {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .footer a
+        {
+            color: #FFFFFF;
+        }
+
+        .footer .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 30px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .footer .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .footer .copyright
+        {
+            margin-left: 50px;
+        }
+        .footer .follow
+        {
+            margin-right: 50px;
+        }
+        .footer .follow p a
+        {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        .player
+        {
+            width: 400px;
+            height: 520px;
+            background-color: white;
+            border-radius: 9%;
+            padding: 10px;
+            margin-right: 100px;
+        }
+        .player .imgbox img
+        {
+            width: 100%;
+        }
+        .player audio
+        {
+            width: 100%;
+            margin: 0;
+        }
+        audio::-webkit-media-controls-panel{
+            background-color: white;
+        }
+        .player div p
+        {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px;
+            font-weight: 900;
+        }
+        .player div span
+        {
+            display: block;
+            text-align: center;
+            margin: 0;
+        }
+        .next-previous-btn
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+        .next-previous-btn a
+        {
+            padding: 10px 30px;
+            text-decoration: none;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="section1">
+        <div class="header">
+            <div class="nav">
+                <a href="../index.html">Home
+                    <hr>
+                </a>
+                <a href="../order.html">Order
+                    <hr>
+                </a>
+                <a href="../music.html">Music
+                    <hr>
+                </a>
+                <a href="../noticeboard.html">Noticeboard
+                    <hr>
+                </a>
+    
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="reg">
+                <a href="../sign_up.html">Regsister / Login In
+                    <hr>
+                </a>
+            </div>
+        </div>
+        <div class="intro">
+            <center>
+                <div class="player">
+                    <div>
+                        <p>Until I found you</p>
+                        <span>Stephen Sanchez</span>
+                    </div>
+                    <div class="imgbox">
+                        <img src="../Gif_Music/11.gif" alt="">
+                    </div>
+                    <audio controls>
+                        <source src="../Gif_Music/11.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </center>
+        </div>
+        <br>
+        <div class="next-previous-btn">            
+            <a href="10.html"><i class="fa-solid fa-backward"></i> Previous</a>
+            <a href="12.html">Next <i class="fa-solid fa-forward"></i></a>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="header">
+            <div class="copyright">
+                <p>© 2020 <a href="https://linktr.ee/frederickx" target="_blank">AungSitPaiOO</a>. All Rights Reserved.</p>
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="follow">
+                <p>Follow Creater on: 
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

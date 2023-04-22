@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အချစ်ကဖေး</title>
+    <link rel="icon" type="image/x-icon" href="photo/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Myanmar:wght@100;200;300;400;600;700;800;900&display=swap');
+
+        body
+        {
+            margin: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: bisque;
+        }
+        .section1
+        {
+            background-image: url(photo/coffeebean-hero-coffee-cup.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0px 0px 400px 0px;
+        }
+        .section1 .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section1 .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 46px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .section1 .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .section1 .nav
+        {
+            display: flex;
+            gap: 15px;
+            margin-left: 100px;
+        }
+        .section1 .nav a, .reg a
+        {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000000;
+        }
+        .section1 .nav a hr, .reg a hr
+        {
+            visibility: hidden;
+            width: 0%;
+            transition-duration: 0.5s;
+            margin-right: 100%;
+            margin-top: 3px;
+        }
+        .section1 .nav a:hover hr, .reg a:hover hr
+        {
+            visibility: visible;
+            width: 100%;
+        }
+
+        .section1 .reg
+        {
+            margin-right: 100px;
+        }
+        .section1 .intro
+        {
+            text-align: left;
+            margin-left: 150px;
+            margin-top: 150px;
+        }
+        .section1 .intro h1
+        {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+        }
+        .footer
+        {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .footer a
+        {
+            color: #FFFFFF;
+        }
+
+        .footer .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 30px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .footer .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .footer .copyright
+        {
+            margin-left: 50px;
+        }
+        .footer .follow
+        {
+            margin-right: 50px;
+        }
+        .footer .follow p a
+        {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+
+        .orderbtn
+        {
+            font-family: 'Raleway', sans-serif;
+            background: transparent;
+            border: 3px solid #DB9457;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 16px 0px 12px;
+            transition-duration: 0.3s;
+            width: 100px;
+            padding: 5px 38px;
+            text-decoration: none;
+            color: black;
+        }
+        .orderbtn:hover
+        {
+            background-color: #DB9457;
+            color: white;
+            width: 300px;
+
+        }
+        .section2
+        {
+            font-family: 'Jost', sans-serif;
+        }
+        .tables
+        {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .table1 table, .table2 table
+        {
+            width: 600px;
+            height: 250px;
+            margin: 24px;
+            border-collapse: separate;
+            border-spacing: 0px 10px;
+        }
+        .table1 .extra
+        {
+            height: 100px;
+        }
+        .table2 .espresso
+        {
+            height: 300px;
+        }
+        .t-item, th
+        {
+            text-align: left;
+            font-size: 20px;
+        }
+        .t-item span
+        {
+            font-size: 14px;
+        }
+        .t-price
+        {
+            text-align: right;
+        }
+        .tabel1 hr
+        { 
+            size: 10px;
+        }
+        .text-espresso
+        {
+            border-top: 5px dotted black;
+            border-bottom: 5px dotted black;
+        }
+        .section3 h1
+        {
+            text-align: center;
+        }
+
+        .section3 .info
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 100px 100px;
+
+        }
+        .section3 .info .num
+        {
+            background-color: #000000;
+            color: #FFFFFF;
+            border-radius: 50%;
+            padding: 10px 16px;
+        }
+        .section3 .info > fieldset
+        {
+            width: 500px;
+            height: 600px;
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 5%;
+
+        }
+        .section3 .info > fieldset legend
+        {
+            font-size: 30px;
+        }
+        .section3 label
+        {
+            display: block;
+            font-family: 'Jost', sans-serif;
+            font-size: 20px;
+        }
+        .section3 .delivery_detail
+        {
+            display: flex;
+            justify-content: space-around;
+        }
+        .section3 .delivery_detail > div
+        {
+            width: 50%;
+        }
+        .section3 .delivery_detail .town
+        {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .section3 .delivery_detail input
+        {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px 0px;
+            border-radius: 10px;
+        }
+
+        .section3 .delivery_detail textarea
+        {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .section3 .info .label_icon
+        {
+            margin: 10px;
+            font-size: 30px;
+            display: flex;
+            gap: 10px;
+            
+        }
+        .section3 .info .label_icon2
+        {
+            margin: 10px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            
+        }
+        .section3 .info .label_icon span
+        {
+            font-size: 10px;
+        }
+        .section3 .info .label_icon2 span
+        {
+            font-size: 10px;
+        }
+        .section3 .info .submit_btn
+        {
+            background-color: #e2dd9e;
+            padding: 10px 0px;
+            border-radius: 10px;
+            transition-duration: 0.5s;
+        }
+        .section3 .info .submit_btn a
+        {
+            text-decoration: none;
+            color: #525251;
+        }
+        .section3 .info .submit_btn:hover
+        {
+            background-color: #39393A;
+        }
+        .section3 .info .submit_btn:hover a
+        {
+            color: white;
+        }
+
+        .section3 .personal_detail div
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .section3 .personal_detail div label
+        {
+            width: 50%;
+        }
+        .section3 .personal_detail div input
+        {
+            width: 50%;
+            margin-bottom: 10px;
+            padding: 10px 0px;
+            border-radius: 10px;
+        }
+        .section3 .personal_detail div select
+        {
+            width: 50%;
+            margin-bottom: 10px;
+            padding: 10px 5px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            
+        }
+        .section3 input::placeholder /*pseudo-element selector*/
+        {
+            text-align: center;
+        }
+        .section3 .info .payment div
+        {
+            margin-bottom: 20px;
+        }
+        .section3 .info .payment fieldset
+        {
+            margin: 0;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .section3 .info .payment fieldset legend
+        {
+            font-size: 15px;
+        }
+        .section3 .info .payment fieldset input
+        {
+            width: 100%;
+            padding: 10px 0px;
+            border: none;
+            margin: 0;
+        }
+        .section3 .info .payment .special fieldset
+        {
+            width: 50%;
+        }
+        .section3 .info .payment .special
+        {
+            display: flex;
+            gap: 10px;
+        }
+        .section3 .info .payment .cash p, .other p
+        {
+            margin: 0;
+            margin-left: 30px;
+        }
+        .section3 .info .total
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0px;
+
+        }
+        .myan
+        {
+            font-family: 'Noto Serif Myanmar', serif;
+            font-weight: 400;
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="section1">
+        <div class="header">
+            <div class="nav">
+                <a href="index.html">Home
+                    <hr>
+                </a>
+                <a href="order.html">Order
+                    <hr>
+                </a>
+                <a href="music.html">Music
+                    <hr>
+                </a>
+                <a href="noticeboard.html">Noticeboard
+                    <hr>
+                </a>
+    
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="reg">
+                <a href="sign_up.html"><i class="fa-solid fa-user"></i> &nbsp; Account
+                    <hr>
+                </a>
+            </div>
+        </div>
+        <div class="intro">
+            <div>
+                <h1 class="wel-text">You can order your favor!<br>
+                </h1>
+                <p class="myan"> 
+                    အော်ဒါမှာယူဖို့ပဲဖြစ်ဖြစ် တစ်ယောက်ယောက်အတွက်မှာပေးဖို့ပဲဖြစ်ဖြစ် 🚴 <br>
+                    အောက်က Menu လေးကိုကြည့်ရှုပြီး📃 <br>
+                    အော်ဒါဖောင်လေးမှာ ကြိုက်နှစ်သက်ရာကို 🥯<br>
+                    ရွေးချယ်မှာယူနိုင်ပါတယ် ✨ <br>
+                </p>
+                <a class="orderbtn" href="#order">ORDER NOW!!!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <center>
+            <h5>LITTLE SIPS</h5>
+            <h1>Coffee & More</h1>
+        </center>
+        <div class="tables">
+            <div class="table1">
+                <table>
+                    <tr>
+                        <th colspan="2">BREWED COFFEE</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">AEROPRESS</td>
+                        <td class="t-price">3</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">COFFEE POUR OVER</td>
+                        <td class="t-price">2.5</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">SINGLE ORIGIN</td>
+                        <td class="t-price">3</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">CAFE AU LAIT</td>
+                        <td class="t-price">3</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">DRIP OF THE DAY</td>
+                        <td class="t-price">2.5</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="2">ICE COFFEE</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">ICE ESPRESSO</td>
+                        <td class="t-price">3</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">COLD BREW LATTE</td>
+                        <td class="t-price">4.5</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">NITRO COLD BREW</td>
+                        <td class="t-price">4</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">DOUBLESHOT ICED COFFEE</td>
+                        <td class="t-price">4.25</td>
+                    </tr>
+                </table>
+                <table class="extra">
+                    <tr>
+                        <th colspan="2">EXTRAS</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">NON-DAIRY MILK<br><span>Oat, Say, Almond Coconul Macademia</span></td>
+                        <td class="t-price">0.50</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table2">
+                <div style="border: 3px solid black; padding: 30px;">
+                    <table class="espressp">
+                        <tr>
+                            <th colspan="4" class="text-espresso">ESPRESSO</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="t-price">small</td>
+                            <td class="t-price">Medium</td>
+                            <td class="t-price">Large</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">AMERICAN LATTE</td>
+                            <td class="t-price">2.6</td>
+                            <td class="t-price">2.85</td>
+                            <td class="t-price">3.1</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">AMERICANO</td>
+                            <td class="t-price">2</td>
+                            <td class="t-price">2.25</td>
+                            <td class="t-price">2.5</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">LATTE</td>
+                            <td class="t-price">2.5</td>
+                            <td class="t-price">2.75</td>
+                            <td class="t-price">3</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">CAPPUCCINO</td>
+                            <td class="t-price">2</td>
+                            <td class="t-price">2.25</td>
+                            <td class="t-price">2.5</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">MACHHIATO</td>
+                            <td class="t-price">2.5</td>
+                            <td class="t-price">2.8</td>
+                            <td class="t-price">3.1</td>
+                        </tr>
+                        <tr>
+                            <td class="t-item">ESPRESSO</td>
+                            <td class="t-price"></td>
+                            <td class="t-price">3</td>
+                            <td class="t-price">4</td>
+                        </tr>
+                    </table>
+                </div>
+                <table>
+                    <tr>
+                        <th colspan="2">NOT COFFEE</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><hr></td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">SPRING WATER<br><span>250ml</span></td>
+                        <td class="t-price">1.5</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">GINGER SKINNY LEMONADE<br><span>Water, Lemon agave neclar and fresh ginger</span></td>
+                        <td class="t-price">2.5</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">MATCHA GREEN TEA LATTE</td>
+                        <td class="t-price">4</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">HOT CHOCOLATE</td>
+                        <td class="t-price">2.5</td>
+                    </tr>
+                    <tr>
+                        <td class="t-item">RISHI TEA<br><span>hot or iced</span></td>
+                        <td class="t-price">3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="section3">
+        
+            <h1 id="order">Place Your Order here</h1><br>
+
+            <div class="info">
+                <fieldset>
+                    <legend><i class="fa-solid fa-1 num"></i> Delivery Detail</legend>
+                    <form action="" class="delivery_detail">
+                        <div>
+                            <label for="">Delivery Address:</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Street Address"><br>
+                            <div class="town">
+                                <input type="text" placeholder="City">
+                                <input type="text" placeholder="State">
+                            </div>
+                            <textarea  placeholder="Note For Rider" cols="30" rows="10"></textarea>
+                        </div>
+                    </form>
+                    <label for="">Add a label</label>
+                    <div class="label_icon">
+                        <i class="fa-solid fa-house"><br><span>Home</span><br><input type="radio" name="icon"></i>
+                        <i class="fa-solid fa-briefcase"><br><span>Work</span><br><input type="radio" name="icon"></i>
+                        <i class="fa-regular fa-heart"><br><span>parrtner</span><br><input type="radio" name="icon"></i>
+                    </div>
+                    <br>
+                    <div class="submit_btn">
+                            <center><a href="">Next</a></center>
+                    </div>
+                </fieldset>
+    
+                <fieldset>
+                    <legend><i class="fa-solid fa-2 num"></i> Personal Details</legend>
+                    <form action="" class="personal_detail">
+                        <div>
+                            <label for="">Full Name:</label>
+                            <input type="text" placeholder="Enter your name"><br>
+                        </div>
+                        <div>
+                            <label for="">Phone Number:</label>
+                            <input type="text" placeholder="09-xxxxxxxx"><br>
+                        </div>
+                        <div>
+                            <label for="">E-mail:</label>
+                            <input type="email" placeholder="ex: myname@example.com"> <br>
+                        </div>
+                        <div>
+                            <label for="">Food or Drink:</label>
+                            <select>
+                                        <optgroup label="BREWED COFFEE">
+                                            <option value="">AEROPRESS</option>
+                                            <option value="">COFFEE POUR OVER</option>
+                                            <option value="">SINGLE ORIGIN</option>
+                                            <option value="">CAFE AU LAIT</option>
+                                            <option value="">DRIP OF THE DAY</option>
+                                        </optgroup>
+                                        <optgroup label="ICE COFFEE">
+                                            <option value="">ICE ESPRESSO </option>
+                                            <option value="">COLD BREW LATTE </option>
+                                            <option value="">NITRO COLD BREW</option>
+                                            <option value="">DOUBLESHOT ICED COFFEE</option>
+                                        </optgroup>
+                                        <optgroup label="EXTRAS">
+                                            <option value="">NON-DAIRY MILK (Oat, Say, Almond Coconul Macademia)</option>
+                                        </optgroup>
+                                        <optgroup label="ESPRESSO">
+                                            <option value="">AMERICAN LATTE</option>
+                                            <option value="">AMERICANO</option>
+                                            <option value="">LATTE</option>
+                                            <option value="">CAPPUCCINO</option>
+                                            <option value="">MACHHIATO</option>
+                                            <option value="">ESPRESSO</option>
+                                        </optgroup>
+                                        <optgroup label="NOT COFFEE">
+                                            SPRING WATER
+                                            250ml 	1.5
+                                            GINGER SKINNY LEMONADE
+                                             	2.5
+                                             	4
+                                             	2.5
+                                            RISHI TEA
+                                            
+                                            <option value="">SPRING WATER (250ml)</option>
+                                            <option value="">GINGER SKINNY LEMONADE (Water, Lemon agave neclar and fresh ginger)</option>
+                                            <option value="">MATCHA GREEN TEA LATTE</option>
+                                            <option value="">HOT CHOCOLATE</option>
+                                            <option value="">RISHI TEA (hot)</option>
+                                            <option value="">RISHI TEA (iced)</option>
+                                        </optgroup>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Amount:</label>
+                            <input type="number">
+                        </div>
+                    </form>
+
+                    <br>
+
+                    <center>
+                        <input type="radio" name="cup_size"> Small
+                        <input type="radio" name="cup_size"> Medium
+                        <input type="radio" name="cup_size"> Large
+                    </center>
+                    <hr width="20%">
+                    <br>
+                    <center>
+                        <div class="label_icon2">
+                            <i class="fa-solid fa-truck-pickup"><br><span>Pick-up</span><br><input type="radio" name="icon"></i>
+                            <i class="fa-solid fa-truck-ramp-box"><br><span>Delivery</span><br><input type="radio" name="icon"></i>
+                        </div>
+                    </center>
+                    
+                    <br><br><br>
+                    <div class="submit_btn">
+                        <center><a href="">Save</a></center>
+                    </div>
+                    
+
+
+                </fieldset>
+    
+                <fieldset>
+                    <legend><i class="fa-solid fa-3 num"></i> Payment</legend>
+                    <form action="" class="payment">
+                        <div class="credit">
+                            <label for=""><input type="radio" name="payment_method">Credit/ Debit/ Visa Card</label>
+                            <fieldset>
+                                <legend>Card Number</legend>
+                                <input type="text" placeholder="xxxx xxxx xxxx xxxx">
+                            </fieldset>
+                            <div class="special">
+                                <fieldset>
+                                    <legend>MM/YY</legend>
+                                    <input type="text" placeholder="mm/yy">
+                                </fieldset>
+                                <fieldset>
+                                    <legend>CVC</legend>
+                                    <input type="text" placeholder="xxx">
+                                </fieldset>
+                            </div>
+                            <fieldset>
+                                <legend>Name of Card Holder</legend>
+                                <input type="text" placeholder="yourname">
+                            </fieldset>
+                        </div>
+                        <div class="cash">
+                            <label for=""><input type="radio" name="payment_method">Cash on Delivery</label>
+                            <p>Simply pay the driver, when he delivers the food to your doorstep.</p>
+                            
+                        </div>
+                        <div class="other">
+                            <label for=""><input type="radio" name="payment_method">Other Payment</label>
+                            <p>There is no other available payment now!!</p>
+                        </div>
+                        <br>
+                        <div class="total">
+                            <p>Total:</p>
+                            <p>10000ks</p> <!-- <-----the value will be change. this is for tempo -->
+                        </div>
+                    </form>
+                    <div class="submit_btn" style="margin-top: 12px;">
+                        <center><a href="">Submit Order</a></center>
+                    </div>
+                </fieldset>
+            </div>
+            
+    </div>
+
+    <div class="footer">
+        <div class="header">
+            <div class="copyright">
+                <p>© 2020 <a href="https://linktr.ee/frederickx" target="_blank">AungSitPaiOO</a>. All Rights Reserved.</p>
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="follow">
+                <p>Follow Creater on: 
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

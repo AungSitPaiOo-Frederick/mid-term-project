@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အချစ်ကဖေး</title>
+    <link rel="icon" type="image/x-icon" href="photo/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Myanmar:wght@100;200;300;400;600;700;800;900&display=swap');
+
+        body
+        {
+            margin: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: bisque;
+        }
+        .section1
+        {
+            background-image: url(photo/coffeebean-hero-coffee-cup.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 30px 30px 400px 0px;
+        }
+        .section1 .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section1 .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 46px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .section1 .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .section1 .nav
+        {
+            display: flex;
+            gap: 15px;
+            margin-left: 100px;
+        }
+        .section1 .nav a, .reg a
+        {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000000;
+        }
+        .section1 .nav a hr, .reg a hr
+        {
+            visibility: hidden;
+            width: 0%;
+            transition-duration: 0.5s;
+            margin-right: 100%;
+            margin-top: 3px;
+        }
+        .section1 .nav a:hover hr, .reg a:hover hr
+        {
+            visibility: visible;
+            width: 100%;
+        }
+
+        .section1 .reg
+        {
+            margin-right: 100px;
+        }
+        .section1 .intro
+        {
+            text-align: left;
+            margin-left: 150px;
+            margin-top: 150px;
+        }
+        .section1 .intro h1
+        {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+        }
+        .myan
+        {
+            font-family: 'Noto Serif Myanmar', serif;
+            font-weight: 400;
+        }
+        .myan span
+        {
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .footer
+        {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 20px;
+        }
+
+        .footer a
+        {
+            color: #FFFFFF;
+        }
+
+        .footer .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 30px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .footer .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .footer .copyright
+        {
+            margin-left: 50px;
+        }
+        .footer .follow
+        {
+            margin-right: 50px;
+        }
+        .footer .follow p a
+        {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        .orderbtn
+        {
+            font-family: 'Raleway', sans-serif;
+            background: transparent;
+            border: 3px solid #DB9457;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 16px 0px 12px;
+            transition-duration: 0.3s;
+            width: 100px;
+            padding: 5px 38px;
+            text-decoration: none;
+            color: black;
+        }
+        .orderbtn:hover
+        {
+            background-color: #DB9457;
+            color: white;
+            width: 300px;
+
+        }
+        .section2
+        {
+            display: flex;
+        }
+        .section2 div
+        {
+            width: 50%;
+        }
+        .section2 .text
+        {
+            text-align: left;
+            margin: 150px;
+        }
+        .section2 .noticeboard
+        {
+            background-color: #DB9457;
+            margin: 150px 100px;
+            width: 90%;
+            border-radius: 5%;
+        }
+
+        .noticeboard p
+        {
+            font-family: 'Noto Serif Myanmar', serif;
+        }
+        .noticeboard .quote
+        {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .noticeboard .title
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .noticeboard .title p
+        {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 0px 40px
+        }
+        .p
+        {
+            text-align: right;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+        .noticeboard .explaination
+        {
+            text-align: center;
+            font-size: 25px;
+            text-decoration: underline;
+        }
+        .noticeboard .explaination_text
+        {
+            margin: 30px;
+            width: 100%;
+        }
+        .noticeboard .explaination_text li, span, .aie
+        {
+            font-size: 20px;
+            font-family: 'Noto Serif Myanmar', serif;
+        }
+        .noticeboard .explaination_text dd
+        {
+            font-size: 25px;
+        }
+        .ily
+        {
+            font-size: 30px;
+            color:  #38220F;
+        }
+        .section3
+        {
+            background-color: #ecf2f2;
+            padding: 50px;
+        }
+        .section3 .form
+        {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            background-color: #FFFFFF;
+            display: flex;
+            
+        }
+        .section3 .form .photo
+        {
+            width: 50%;
+        }
+        .section3 .form .photo img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .section3 .form .form_info
+        {
+            width: 50%;
+            margin: auto;
+            padding: 0px 100px;
+        }
+        .section3 .form .form_info label
+        {
+            font-size: 20px;
+        }
+        .section3 .form .form_info input
+        {
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 3px solid rgb(133, 100, 100);
+        }
+        .section3 .form .form_info textarea
+        {
+            width: 100%;
+            border: 3px solid rgb(133, 100, 100);
+        }
+        .section3 .form .form_info p, h1
+        {
+            margin: 0;
+        }
+        .section3 .form .form_info p
+        {
+            margin-bottom: 30px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="section1">
+        <div class="header">
+            <div class="nav">
+                <a href="index.html">Home
+                    <hr>
+                </a>
+                <a href="order.html">Order
+                    <hr>
+                </a>
+                <a href="music.html">Music
+                    <hr>
+                </a>
+                <a href="noticeboard.html">Noticeboard
+                    <hr>
+                </a>
+    
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="reg">
+                <a href="sign_up.html"><i class="fa-solid fa-user"></i> &nbsp; Account
+                    <hr>
+                </a>
+            </div>
+        </div>
+        <div class="intro">
+            <div>
+                <h1 class="wel-text">Best Service Of Love Cafe<br>
+                </h1>
+                <p class="myan"> 
+                    ဒီဟာလေးကတော့ကျွန်တော်တို့ အချစ်ကဖေးလေးရဲ့ <br>
+                    အထူးခြားဆုံးဝန်ဆောင်မှုလေးအကြောင်းပဲဖြစ်ပါတယ် <br>
+                    ဆုလဘ်တွေ လက်ဆောင်တွေလဲ ပါဝင်တာမို့ <br>
+                    ဒီအစီအစဉ်လေးကို ဝင်ရောက်ပါဝင်ဖို့ ဖိတ်ခေါ်ချင်ပါတယ် <br>    
+                </p>
+                <a class="orderbtn" href="#explain">Keep Reading!!!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="text">
+            <h1 id="explain" class="wel-text">Best Service Of Love Cafe</h1>
+            <p class="myan">
+                ကျွန်တော်တို့ရဲ့မည်သည့်စားသုံးသူမဆို မိမိကိုယ်ပိုင်အတွေးအခေါ်၊ ဒဿန၊ <br>
+                တွေ့ရှိချက် (သို့) ရှိဖူး၊ ကျော်ကြားဖူးသော ကမ္ဘာကျော် အဆိုအမိန့် တစ်ခုခု ကို <br>
+                မိမိ၏ နာမည်၊ လိပ်စာနှင့်တကွ ထည့်စေလိုခြင်းဖြစ်ပါတယ် <br>
+                <span>🌟🌟🌟</span><br>
+                ထိုအတွေးအခေါ်၊ အဆိုအမိန့်များကို နံပါတ်စဉ်တပ်ကာ..လတစ်လ၏နောက်ဆုံးနေ့တိုင်းမှာ <br>
+                formပါ လိပ်စာအတိုင်းပိုင်ဆိုင်များကိုဖိတ်ကြားကာ မဲဖောက်ပေးပါသည်။ <br>
+                <span>🌟🌟🌟</span><br>
+                မဲပေါက်သောသူသည် ပထမလ၏ အတွေးအခေါ်ပိုင်ရှင်ဖြစ်ပြီး...သူကိုယ်တိုင်ပဲ <br>
+                နောက်တစ်လရဲ့ အတွေးအခေါ်ပိုင်ရှင်ကိုရွေးထုတ်ပေးရပါမယ်။(လွဲပေးသည်) <br>
+                <span>🌟🌟🌟</span><br>
+                မဲပေါက်သောအတွေးအခေါ်ကို ဆိုင်မှာရှိတဲ့ Noticeboardတင်မဟုတ် <br>
+                Websiteမှာရှိသော Noticeboardတွင်ပါ <br>
+                တစ်လတိတိ တင်ထားပေးထားမှာပါဖြစ်ပါတယ် <br>
+                <span>🌟🌟🌟</span><br>
+                မဲပေါက်သောအတွေးအခေါ်ပညာရှင်များကိုလည်း ဆုပေးပါသေးသည် <br>
+                ဆုပေးသည်ဆိုတာ ဆိုင်မှတစ်ခုတာ board ပိုင်ရှင်အဖြစ် တစ်လတိတိသတ်မှတ်ပေးပါသည်၊ <br>
+                ထို board ပိုင်ရှင်များကို Love Cafe(အချစ်ကဖေး) ရဲ့family မန်ဘာဝင်တွေအဖြစ်သတ်မှတ်ပြီး <br>
+                နှစ်တစ်နှစ်အကုန်တိုင်းမှာ ဆိုင်မှ ဘရားဖူး(သို့)အပန်းဖြေခရီးလိုက်ပို့ပေးပါတယ်။ <br>
+                <span>🌟🌟🌟</span><br>
+                ဒါကတော့ ကျွန်တော်တို့ အချစ်ကဖေး ရဲ့ ထူးခြားတဲ့ ဝန်ဆောင်မှုလေးပါ။ <br>
+            </p>
+        </div>
+        <div class="noticeboard">
+            <div class="title">
+                <p>Noticeboard</p>
+                <p>April</p>
+            </div>
+            <p class="quote">
+                " ခဲနဲ့ ပေါက်ခံရတဲ့ ခွေးတစ်ကောင်က လိုဗွီလို့ အော်ပြီး ရှုးခါသွားတယ် "
+            </p>
+            <br><br>
+            <p class="explaination">
+                ရှင်းလင်းချက်
+            </p>
+            <div class="explaination_text">
+                <span><i class="fa-solid fa-circle-arrow-right"></i> ခဲနဲ့ပေါက်ခံရတဲ့ခွေးဟာ ဘလိုအော်မလဲ....?</span>
+                    <dd><span class="aie">"အိုင်"</span>or "I"</dd>
+                <span><i class="fa-solid fa-circle-arrow-right"></i> လိုဗွီဆိုတာ ဒီလို LO=လို VE=ဗွီ</span>
+                    <dd>Love</dd>
+                <span><i class="fa-solid fa-circle-arrow-right"></i> ရှုးသွားတယ်</span>
+                    <dd>You</dd>
+                <center>
+                    <span>အဲဒီတော့.....</span><br>
+                    <span class="ily">𝓘 𝓛𝓸𝓿𝓮 𝓨𝓸𝓾 💘</span>
+                </center>
+            </div>
+            <br><br><br><br><br>
+            <p class="p"><i class="fa-solid fa-person" style="font-size: 40px;"></i> သိုးဆောင်း</p>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="form"> 
+            <div class="photo">
+                <img src="photo/form-photo.jpg" alt="">
+            </div>
+            <div class="form_info">
+                <h1>Welcome to love cafe Thinking form</h1>
+                <p>Fill all the infomation for the winner of next month</p>
+                <label for="">Full Name</label> <br>
+                <input type="text"> <br><br>
+                <label for="">Phone Number</label> <br>
+                <input type="text"> <br><br>
+                <label for="">Address</label> <br>
+                <input type="text"> <br><br>
+                <label for="">Philosophy/Quote</label> <br>
+                <input type="text"> <br><br>
+                <label for="">Explaination</label> <br>
+                <textarea name="" id="" cols="30" rows="10"></textarea> <br>
+                <br><br><br>
+                <center><a class="orderbtn" href="">Submit</a></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="header">
+            <div class="copyright">
+                <p>© 2020 <a href="https://linktr.ee/frederickx" target="_blank">AungSitPaiOO</a>. All Rights Reserved.</p>
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="follow">
+                <p>Follow Creater on: 
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

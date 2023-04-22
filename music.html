@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အချစ်ကဖေး</title>
+    <link rel="icon" type="image/x-icon" href="photo/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Myanmar:wght@100;200;300;400;600;700;800;900&display=swap');
+
+        body
+        {
+            margin: 0;
+            font-family: 'Roboto Condensed', sans-serif;
+            background-color: bisque;
+        }
+        .section1
+        {
+            background-image: url(photo/coffeebean-hero-coffee-cup.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0px 0px 400px 0px;
+        }
+        .section1 .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section1 .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 46px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .section1 .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .section1 .nav
+        {
+            display: flex;
+            gap: 15px;
+            margin-left: 100px;
+        }
+        .section1 .nav a, .reg a
+        {
+            font-size: 20px;
+            text-decoration: none;
+            color: #000000;
+        }
+        .section1 .nav a hr, .reg a hr
+        {
+            visibility: hidden;
+            width: 0%;
+            transition-duration: 0.5s;
+            margin-right: 100%;
+            margin-top: 3px;
+        }
+        .section1 .nav a:hover hr, .reg a:hover hr
+        {
+            visibility: visible;
+            width: 100%;
+        }
+
+        .section1 .reg
+        {
+            margin-right: 100px;
+        }
+        .section1 .intro
+        {
+            text-align: left;
+            margin-left: 150px;
+            margin-top: 150px;
+        }
+        .section1 .intro h1
+        {
+            font-family: 'Playfair Display', serif;
+            font-size: 46px;
+        }
+        .footer
+        {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .footer a
+        {
+            color: #FFFFFF;
+        }
+
+        .footer .header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .header h1
+        {
+            font-family: W70ArtHouse;
+            font-size: 30px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .footer .header span
+        {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .footer .copyright
+        {
+            margin-left: 50px;
+        }
+        .footer .follow
+        {
+            margin-right: 50px;
+        }
+        .footer .follow p a
+        {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        .feature > div
+        {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 30px;
+        }
+        .feature > h1
+        {
+            margin-left: 180px;
+            margin-top: 50px;
+            margin-bottom: 0px;
+        }
+        .feature .music
+        {
+            width: 350px;
+            height: 350px;
+        }
+        .feature .recommend .music
+        {
+            width: 250px;
+            height: 250px;
+        }
+        .feature .music .play-btn, .feature .music .setting .setting_btn
+        {
+            visibility: hidden;
+            transition:visibility 10000ms
+ 
+        }
+        .feature .music:hover .play-btn
+        {
+            visibility: visible;
+        }
+        .feature .music:hover .setting_btn
+        {
+            visibility: visible;
+        }
+        .feature .setting
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .feature .setting a
+        {
+            transition-duration: 0.5s;
+        }
+        .feature .setting a:hover
+        {
+            transform: scale(1.1);
+        }
+        .feature .play
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .feature .play
+        {
+            margin-top: 210px;
+            margin-left: 10px;
+        }
+        .feature .recommend .play
+        {
+            margin-top: 135px;
+            margin-left: 10px;
+        }
+        .feature .play a
+        {
+            text-decoration: none;
+            color: black;
+            font-family: Raleway;
+            transition-duration: 0.5s;
+        }
+        .feature .play .big_text
+        {
+            font-size: 20px;
+        }
+        .feature .play .big_text:hover
+        {
+            transform: scale(1.05);
+        }
+        .feature .small_text
+        {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .feature .play-btn
+        {
+            font-size: 30px;
+            margin-right: 20px;
+            transition-duration: 0.5s;
+        }
+        .feature .play-btn:hover
+        {
+            transform: scale(1.1);
+        }
+
+        .feature .music1
+        {
+            background-image: url(Gif_Music/1.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music2
+        {
+            background-image: url(Gif_Music/2.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music3
+        {
+            background-image: url(Gif_Music/3.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music4
+        {
+            background-image: url(Gif_Music/4.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music5
+        {
+            background-image: url(Gif_Music/5.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music6
+        {
+            background-image: url(Gif_Music/6.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music7
+        {
+            background-image: url(Gif_Music/7.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music8
+        {
+            background-image: url(Gif_Music/8.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music9
+        {
+            background-image: url(Gif_Music/9.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music10
+        {
+            background-image: url(Gif_Music/10.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music11
+        {
+            background-image: url(Gif_Music/11.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music12
+        {
+            background-image: url(Gif_Music/12.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music13
+        {
+            background-image: url(Gif_Music/13.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .feature .music14
+        {
+            background-image: url(Gif_Music/14.gif);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5%;
+        }
+        .artist
+        {
+            width: 250px;
+            height: 250px;
+            background-color: #D6D6D3;
+            border-radius: 5%;
+        }
+        .artist  .artist_pf img
+        {
+            width: 180px;
+            height: 180px;
+            margin: 0px 35px;
+            margin-top: 10px;
+            border-radius: 50%;
+        }
+        .artist h1
+        {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .myan
+        {
+            font-family: 'Noto Serif Myanmar', serif;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="section1">
+        <div class="header">
+            <div class="nav">
+                <a href="index.html">Home
+                    <hr>
+                </a>
+                <a href="order.html">Order
+                    <hr>
+                </a>
+                <a href="music.html">Music
+                    <hr>
+                </a>
+                <a href="noticeboard.html">Noticeboard
+                    <hr>
+                </a>
+    
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="reg">
+                <a href="sign_up.html"><i class="fa-solid fa-user"></i> &nbsp; Account
+                    <hr>
+                </a>
+            </div>
+        </div>
+        <div class="intro">
+            <div>
+                <h1 class="wel-text">Chill with Music 🎧<br>
+                </h1>
+                <p class="myan"> 
+                    ဒီအစီအစဉ်လေးကတော့ music lover လေးတွေအတွက် <br>
+                    ဖြစ်ပါတယ် ကိုယ်သဘောကျတဲ့ သီချင်းကို 📃 <br>
+                    ကျွန်တော်တို့ဆိုင်မှာပဲဖြစ်ဖြစ် တခြားတစ်နေရာမှာဘဲဖြစ်ဖြစ် 🥯<br>
+                    ကော်ဖီးလေးတစ်ခွက်သောက်ရင်း နားသောတဆင်နိုင်မှာဘဲ ✨ ဖြစ်ပါတယ် <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="feature">
+            <h1>Featured</h1>
+            <div>
+                <div class="music1 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/1.html">
+                            Ne Ne Lay Nak Wayy <br>
+                            <span class="small_text" href="Muisc_file/1.html">Double J</span>
+                        </a>
+                        <a href="Muisc_file/1.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music2 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/2.html">
+                            Chit Tay Tan Thar<br>
+                            <span class="small_text" href="Muisc_file/2.html">Shine</span>
+                        </a>
+                        <a href="Muisc_file/2.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music3 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/3.html">
+                            Look at me Now <br>
+                            <span class="small_text" href="Muisc_file/3.html">Punch Parade</span>
+                        </a>
+                        <a href="Muisc_file/3.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music4 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/4.html">
+                            Perfect Stranger <br>
+                            <span class="small_text" href="Muisc_file/4.html">Jonas Blue</span>
+                        </a>
+                        <a href="Muisc_file/4.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <h1>Recommend For you</h1>
+            <div class="recommend">
+                <div class="music5 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/5.html">
+                            LDRS <br>
+                            <span class="small_text" href="Muisc_file/5.html">Double J</span>
+                        </a>
+                        <a href="Muisc_file/5.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music6 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/6.html">
+                           Phyit T Hmu<br>
+                            <span class="small_text" href="Muisc_file/6.html">Shine</span>
+                        </a>
+                        <a href="Muisc_file/6.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music7 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/7.html">
+                            That's what I want <br>
+                            <span class="small_text" href="Muisc_file/7.html">Lil Nas X</span>
+                        </a>
+                        <a href="Muisc_file/7.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music8 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/8.html">
+                            Anyone <br>
+                            <span class="small_text" href="Muisc_file/8.html">Justin Bieber</span>
+                        </a>
+                        <a href="Muisc_file/8.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music9 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/9.html">
+                            Amazing <br>
+                            <span class="small_text" href="Muisc_file/9.html">Rex Organge Country</span>
+                        </a>
+                        <a href="Muisc_file/9.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h1>Popular</h1>
+            <div class="recommend">
+                <div class="music10 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/10.html">
+                            Night Changes <br>
+                            <span class="small_text" href="Muisc_file/10.html">One Direction</span>
+                        </a>
+                        <a href="Muisc_file/10.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music11 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/11.html">
+                            Until I found you <br>
+                            <span class="small_text" href="Muisc_file/11.html">Stephen Sanchez</span>
+                        </a>
+                        <a href="Muisc_file/11.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music12 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/12.html">
+                            Without You <br>
+                            <span class="small_text" href="Muisc_file/12.html">Avicii</span>
+                        </a>
+                        <a href="Muisc_file/12.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music13 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/12.html">
+                            Perfect <br>
+                            <span class="small_text" href="Muisc_file/12.html">One Direction</span>
+                        </a>
+                        <a href="Muisc_file/12.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+                <div class="music14 music">
+                    <div class="setting">
+                        <div></div>
+                        <a class="setting_btn"><i class="fa-solid fa-bars"></i></a>
+                    </div>
+                    <div class="play">
+                        <a class="big_text" href="Muisc_file/14.html">
+                            SMS<br>
+                            <span class="small_text" href="Muisc_file/14.html">Double J</span>
+                        </a>
+                        <a href="Muisc_file/14.html" class="play-btn"><i class="fa-solid fa-circle-play"></i></a>
+                    </div>
+                </div>
+            </div>
+            <h1>Artists</h1>
+            <div class="recommend">
+                <div class="artist">
+                    <div class="artist_pf">
+                        <img src="Gif_Music/JB.jpg" alt="">
+                    </div>
+                    <h1>Justin Bebier</h1>
+                </div>
+                <div class="artist">
+                    <div class="artist_pf">
+                        <img src="Gif_Music/Shine.jpg" alt="">
+                    </div>
+                    <h1>Shine</h1>
+                </div>
+                <div class="artist">
+                    <div class="artist_pf">
+                        <img src="Gif_Music/DJ.jpg" alt="">
+                    </div>
+                    <h1>Double J</h1>
+                </div>
+                <div class="artist">
+                    <div class="artist_pf">
+                        <img src="Gif_Music/OD.jpg" alt="">
+                    </div>
+                    <h1>One Direction</h1>
+                </div>
+                <div class="artist">
+                    <div class="artist_pf">
+                        <img src="Gif_Music/avicii.jpg" alt="">
+                    </div>
+                    <h1>Avicii</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="header">
+            <div class="copyright">
+                <p>© 2020 <a href="https://linktr.ee/frederickx" target="_blank">AungSitPaiOO</a>. All Rights Reserved.</p>
+            </div>
+            <div>
+                <h1>
+                    <i class="fa-solid fa-mug-hot"></i>&nbsp;tcspfuaz; <br>
+                    <span>
+                        a place where you can find true love
+                    </span>
+                </h1>
+            </div>
+            <div class="follow">
+                <p>Follow Creater on: 
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linktr.ee/frederickx" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
